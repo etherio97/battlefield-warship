@@ -14,6 +14,6 @@ import { FirebaseService } from './firebase/firebase.service';
       deps: [FirebaseService],
     },
   ],
-  exports: [],
+  exports: [IconsModule],
 })
 export class CoreModule {}

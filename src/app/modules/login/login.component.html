@@ -1,0 +1,17 @@
+<div class="p-4 bg-white rounded-md">
+  <mat-form-field class="w-full" appearance="fill">
+    <mat-label>Nickname</mat-label>
+    <input
+      matInput
+      type="text"
+      autocomplete="nickname"
+      placeholder="eg. John Smith"
+      [formControl]="nickname"
+      required
+    />
+    <mat-error>This field is requred.</mat-error>
+  </mat-form-field>
+  <button mat-flat-button class="w-full" color="primary" [disabled]="false">
+    Join Now
+  </button>
+</div>
