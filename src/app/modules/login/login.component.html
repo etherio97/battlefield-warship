@@ -1,17 +1,39 @@
-<div class="p-4 bg-white rounded-md">
-  <mat-form-field class="w-full" appearance="fill">
-    <mat-label>Nickname</mat-label>
-    <input
-      matInput
-      type="text"
-      autocomplete="nickname"
-      placeholder="eg. John Smith"
-      [formControl]="nickname"
-      required
-    />
-    <mat-error>This field is requred.</mat-error>
-  </mat-form-field>
-  <button mat-flat-button class="w-full" color="primary" [disabled]="false">
-    Join Now
-  </button>
+<div class="my-2 space-y-2">
+  <h2
+    class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-rose-400"
+  >
+    Battlefield
+  </h2>
+  <h2
+    class="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-bl from-purple-500 to-rose-500"
+  >
+    Warship
+  </h2>
+  <div class="p-4 space-y-2 bg-white rounded-md">
+    <mat-form-field class="w-full" appearance="fill">
+      <mat-label>Nickname</mat-label>
+      <input
+        matInput
+        type="text"
+        autocomplete="nickname"
+        placeholder="eg. John Smith"
+        [formControl]="nicknameControl"
+        required
+      />
+      <mat-error>This field is requred.</mat-error>
+      <mat-icon
+        class="icon-size-5"
+        svgIcon="heroicons_solid:user"
+        matPrefix
+      ></mat-icon>
+    </mat-form-field>
+    <button
+      mat-flat-button
+      class="w-full"
+      color="primary"
+      [disabled]="nicknameControl.invalid"
+    >
+      Join Now
+    </button>
+  </div>
 </div>

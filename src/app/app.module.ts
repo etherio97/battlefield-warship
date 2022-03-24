@@ -7,6 +7,7 @@ import { CoreModule } from './core/core.module';
 import { routes } from './app.routing';
 
 import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent],
@@ -14,10 +15,11 @@ import { AppComponent } from './app.component';
     BrowserModule,
     RouterModule.forRoot(routes),
     BrowserAnimationsModule,
+    HttpClientModule,
     CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [CoreModule],
+  exports: [HttpClientModule],
 })
 export class AppModule {}

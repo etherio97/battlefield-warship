@@ -6,12 +6,12 @@ import { FormBuilder, FormControl, Validators } from '@angular/forms';
   templateUrl: './login.component.html',
 })
 export class LoginComponent implements OnInit {
-  nickname!: FormControl;
+  nicknameControl!: FormControl;
 
   constructor(private _fb: FormBuilder) {}
 
   ngOnInit(): void {
-    this.nickname = this._fb.control('', [
+    this.nicknameControl = this._fb.control('', [
       Validators.required,
       Validators.minLength(3),
       Validators.maxLength(16),
